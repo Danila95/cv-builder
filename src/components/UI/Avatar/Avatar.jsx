@@ -21,7 +21,7 @@ const Wrapper = styled.div`
 `
 
 const Avatar = ({ isSquare }) => {
-	return <Wrapper isSquare={isSquare}>Avatar</Wrapper>
+	return <Wrapper isSquare={isSquare} />
 }
 
 export default Avatar
