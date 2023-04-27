@@ -17,12 +17,12 @@ const Wrapper = styled.div`
 	}
 `
 
-const Title = ({ size, isUppercase, isShowButton, className, onClick, children, ...attrs }) => {
+const Title = ({ size, isUppercase, isShowButton, className, onClick, children, contentEditable = true, ...attrs }) => {
 	const classes = classNames(`ui-title-${size}`, className, { isUppercase })
 
 	return (
 		<Wrapper>
-			<p className={classes} contentEditable suppressContentEditableWarning spellCheck={false} {...attrs}>
+			<p className={classes} contentEditable={contentEditable} suppressContentEditableWarning spellCheck={false} {...attrs}>
 				{children}
 			</p>
 			{isShowButton && (
